@@ -4,8 +4,6 @@ public class Product {
     public double price;
     public int qnty;
 
-    public char choose;
-
     public double totalValueInStock() {
         return price * qnty;
     }
