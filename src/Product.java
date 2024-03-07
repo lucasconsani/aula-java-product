@@ -22,7 +22,6 @@ public class Product {
         System.out.printf("Product Name: %s%n", name);
         System.out.printf("Product price: %.2f%n", price);
         System.out.printf("Quantity in stock: %d%n", qnty);
-        System.out.printf("Total price: %.2f%n", totalValueInStock());
 
     }
 
