@@ -4,13 +4,14 @@ public class Account {
     private String name;
     private double value;
 
-    public Account(){
+    public Account() {
 
     }
-    public Account(int acNumber, String name, double value){
+
+    public Account(int acNumber, String name, double inicialDeposit) {
         this.acNumber = acNumber;
         this.name = name;
-        this.value = value;
+        depositValue(inicialDeposit);
     }
 
     public Account(int acNumber, String name) {
@@ -21,25 +22,27 @@ public class Account {
     public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
 
-    public void depositValue(double deposit){
+    public void depositValue(double deposit) {
         this.value += deposit;
     }
-    public  void withdrawValue(double withdraw){
-        if(withdraw != 0) {
+
+    public void withdrawValue(double withdraw) {
+        if (withdraw != 0) {
             this.value -= withdraw + 5.0;
         }
     }
 
-    public String toString(){
+    public String toString() {
         return "Account: "
                 + acNumber
                 + ", Holder: "
                 + name
-                +String.format(", Balance: $ %.2f", value);
+                + String.format(", Balance: $ %.2f", value);
     }
 
 
