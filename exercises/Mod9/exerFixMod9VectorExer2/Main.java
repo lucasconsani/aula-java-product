@@ -14,23 +14,22 @@ public class Main {
 
         double[] numero = new double[n];
 
-        for(int i = 0; i < numero.length; i++){
+        for (int i = 0; i < numero.length; i++) {
             System.out.print("Digite um número: ");
             numero[i] = sc.nextDouble();
         }
         System.out.print("VALORES: ");
         for (double v : numero) {
-            System.out.printf("%.1f ",v);
+            System.out.printf("%.1f ", v);
         }
 
-        for(double s : numero){
+        for (double s : numero) {
             soma += s;
         }
         System.out.printf("%nSOMA: %.2f%n", soma);
 
         double avg = soma / numero.length;
         System.out.printf("MEDIA: %.2f", avg);
-
 
 
         sc.close();
