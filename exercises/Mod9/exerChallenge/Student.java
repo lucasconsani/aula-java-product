@@ -24,4 +24,12 @@ public class Student {
     public int getRoom() {
         return room;
     }
+
+    public String toString(){
+        return room
+                + ": "
+                + name
+                + ", "
+                + email;
+    }
 }

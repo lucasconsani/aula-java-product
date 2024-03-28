@@ -14,13 +14,12 @@ public class Main {
             n = sc.nextInt();
         }
         int cont = 0;
-        int[] rooms = new int[n];
-        Student[] student = new Student[9];
+        Student[] student = new Student[10];
 
 
-        for (int i = 0; i < rooms.length; i++) {
+        for (int i = 0; i < n; i++) {
             cont += 1;
-            System.out.printf("#rent %d%n", cont);
+            System.out.printf("%n#rent %d%n", cont);
             System.out.print("Name: ");
             sc.nextLine();
             String name = sc.nextLine();
@@ -31,12 +30,10 @@ public class Main {
             student[room] = new Student(name, email, room);
         }
 
-        System.out.println("Busy rooms:");
+        System.out.printf("%nBusy rooms:%n");
         for (int i = 0; i < student.length; i++) {
             if (student[i] != null) {
-                System.out.printf("%d: ", student[i].getRoom());
-                System.out.printf("%s, ", student[i].getName());
-                System.out.printf("%s%n", student[i].getEmail());
+                System.out.println(student[i].toString());
             }
         }
         sc.close();
