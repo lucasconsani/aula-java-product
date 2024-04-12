@@ -41,7 +41,7 @@ public class Main {
                 cont0 += 1;
             }
         }
-        double porcentagem = (double) cont0 * 100 / pessoa.length;
+        double porcentagem = (double) cont0 * 100.0 / pessoa.length;
         System.out.printf("%.1f", porcentagem);
         System.out.print("%");
         for (Pessoa teste : pessoa) {
