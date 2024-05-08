@@ -24,12 +24,12 @@ public class Main {
             if(choose == 'i'){
                 System.out.print("Health expenditures: ");
                 double gastoComSaude = sc.nextDouble();
-                Pessoa pessoa = new PessoaFísica(name, rendaAnual, gastoComSaude);
+                Pessoa pessoa = new PessoaFisica(name, rendaAnual, gastoComSaude);
                 list.add(pessoa);
             } else if (choose == 'c') {
                 System.out.print("Number of employees: ");
                 int numeroDeFuncionarios = sc.nextInt();
-                Pessoa pessoa = new PessoaJurídica(name, rendaAnual, numeroDeFuncionarios);
+                Pessoa pessoa = new PessoaJuridica(name, rendaAnual, numeroDeFuncionarios);
                 list.add(pessoa);
             }
         }
