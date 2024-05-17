@@ -42,8 +42,8 @@ public class Account {
     public void deposit(Double amount){
         balance += amount;
     }
-    public void withdraw(Double amount, Double limit) throws DomainException{
-        if(amount > limit){
+    public void withdraw(Double amount) throws DomainException{
+        if(amount > withdrawLimit){
             throw new DomainException("The amount exceeds the withdraw limit");
         }else{
             balance -= amount;
@@ -52,6 +52,6 @@ public class Account {
 
     public String toString(){
         return "New Balance: "
-
+                + String.format("%.2f ", balance);
     }
 }

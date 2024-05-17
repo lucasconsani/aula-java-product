@@ -18,11 +18,11 @@ public class Main {
             Account acc = new Account(number, holder, balance, limit);
             System.out.println("Enter amount for withdraw: ");
             double amount = sc.nextDouble();
-        }
-        catch (RuntimeException e) {
+            acc.withdraw(amount);
+        } catch (DomainException e){
+            System.out.println("Error: " + e.getMessage());
+        } catch (RuntimeException e){
             System.out.println("Unexpected error.");
-        }catch (DomainException e){
-
         }
 
 
